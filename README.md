@@ -1,22 +1,26 @@
-# Titanic Dataset Analysis using Python
+# Titanic Data Analysis using Python
 
 ## Project Overview
 
-This project performs Exploratory Data Analysis (EDA) on the Titanic Dataset using Python. The goal is to understand passenger information, identify missing values, perform data cleaning, and analyze factors affecting passenger survival.
+This project performs Exploratory Data Analysis (EDA) on the Titanic Dataset using Python. The objective is to explore passenger data, identify patterns, handle missing values, and gain insights into factors that influenced survival during the Titanic disaster.
 
-## Dataset
+---
 
-The dataset contains information about Titanic passengers, including:
+## Dataset Information
 
-* PassengerId
-* Survived
-* Pclass
+The dataset contains passenger information such as:
+
+* Passenger ID
+* Survival Status
+* Passenger Class (Pclass)
 * Name
-* Sex (Gender)
+* Gender
 * Age
-* Ticket
 * Fare
-* Embarked
+* Ticket Number
+* Embarkation Port
+
+---
 
 ## Technologies Used
 
@@ -27,129 +31,127 @@ The dataset contains information about Titanic passengers, including:
 * Seaborn
 * Jupyter Notebook
 
+---
+
 ## Project Workflow
 
-### 1. Import Libraries
+### Step 1: Import Required Libraries
 
-The required Python libraries are imported:
+The following libraries are imported for data analysis and visualization:
 
-* NumPy
 * Pandas
+* NumPy
 * Matplotlib
 * Seaborn
 
-### 2. Load Dataset
+---
 
-The Titanic dataset is loaded using Pandas.
+### Step 2: Load the Dataset
 
-```python
-df = pd.read_csv("Titanic-Dataset.csv")
+The Titanic dataset is loaded into a Pandas DataFrame for analysis.
+
+---
+
+### Step 3: Explore the Dataset
+
+Basic exploration techniques are performed:
+
+* Display first few rows
+* Check dataset shape
+* View column information
+* Generate summary statistics
+
+---
+
+### Step 4: Data Cleaning
+
+Data cleaning operations include:
+
+* Identifying missing values
+* Removing unnecessary columns
+* Handling null values
+* Preparing data for analysis
+
+---
+
+### Step 5: Statistical Analysis
+
+Several statistical measures are calculated, including:
+
+* Average Age
+* Minimum Age
+* Maximum Age
+* Survival Count
+* Passenger Class Distribution
+
+---
+
+### Step 6: Feature Analysis
+
+Different features are analyzed to understand their relationship with survival:
+
+* Gender Distribution
+* Age Distribution
+* Passenger Class Analysis
+* Survival Rate Analysis
+
+---
+
+### Step 7: Data Visualization
+
+Visualizations are created using Matplotlib and Seaborn to better understand trends and patterns within the dataset.
+
+Examples include:
+
+* Histograms
+* Count Plots
+* Bar Charts
+* Distribution Plots
+
+---
+
+## Key Insights
+
+* Survival rates differed across passenger classes.
+* Female passengers generally had higher survival rates.
+* Missing values were mainly present in the Age column.
+* Passenger class significantly influenced survival probability.
+
+---
+
+## Project Structure
+
+```text
+titanic-data-analysis/
+│
+├── Titanic_Analysis.ipynb
+├── Titanic-Dataset.csv
+├── requirements.txt
+├── README.md
+└── images/
 ```
 
-### 3. Initial Data Exploration
+---
 
-Basic dataset inspection is performed:
-
-* View first records
-* Check column names
-* Dataset information
-* Summary statistics
-* Dataset shape
-
-### 4. Missing Value Analysis
-
-Null values are identified using:
-
-```python
-df.isnull().sum()
-```
-
-Special attention is given to the Age column.
-
-### 5. Data Cleaning
-
-Unnecessary columns are removed:
-
-* Ticket
-* Name
-* PassengerId
-
-```python
-df.drop(['Ticket'], axis=1, inplace=True)
-df.drop(['Name'], axis=1, inplace=True)
-df.drop(['PassengerId'], axis=1, inplace=True)
-```
-
-### 6. Statistical Analysis
-
-Several statistical operations are performed:
-
-* Total survivors
-* Average passenger class
-* Minimum age
-* Maximum age
-* Standard deviation of age
-
-### 7. Feature Analysis
-
-Analysis includes:
-
-* Passenger class distribution
-* Embarkation distribution
-* Survival statistics
-
-### 8. Data Transformation
-
-Gender values are converted into numerical format:
-
-```python
-df['Gender'] = df['Gender'].map({
-    'male': 0,
-    'female': 1
-})
-```
-
-### 9. Survival Analysis
-
-Passenger survival rates are analyzed based on different features.
-
-## Results
-
-The project provides insights into:
-
-* Passenger demographics
-* Missing data patterns
-* Survival trends
-* Class distribution
-* Gender-based analysis
-
-## How to Run
-
-### Step 1
+## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/titanic-data-analysis.git
+git clone https://github.com/codinghub37/titanic-data-analysis.git
 ```
 
-### Step 2
-
-Move into the project folder:
+Move to the project directory:
 
 ```bash
 cd titanic-data-analysis
 ```
 
-### Step 3
-
-Install dependencies:
+Install required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
-
-### Step 4
 
 Launch Jupyter Notebook:
 
@@ -157,20 +159,29 @@ Launch Jupyter Notebook:
 jupyter notebook
 ```
 
-### Step 5
+Open the notebook and run all cells.
 
-Open the notebook file and run all cells.
+---
 
 ## Future Improvements
 
-* Advanced visualizations
-* Feature engineering
-* Machine Learning models
-* Survival prediction system
+* Advanced Data Visualization
+* Feature Engineering
+* Machine Learning Models
+* Survival Prediction System
+
+---
 
 ## Author
 
-Eisha Younas
+### Eisha Younas
+
+GitHub: https://github.com/codinghub37
 
 Data Analyst | Machine Learning Enthusiast | AI Learner
+
+---
+
+ If you found this project useful, consider giving it a star on GitHub.
+
 
